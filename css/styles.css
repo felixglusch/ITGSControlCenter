@@ -1,0 +1,40 @@
+.centerText
+{
+    text-align: center;
+}
+
+.marginTop
+{
+    margin-top: 100px;
+}
+
+#centerHorizontally
+{
+    width: 50%;
+    margin: 0 auto;
+}
+
+#categories
+{
+    float: left;
+    width: 55%;
+    position: fixed;
+}
+
+#cardTable
+{
+    margin-left: 275px;
+    text-align: center;
+    overflow: hidden;
+    width: 1500px;
+    table-layout: fixed;
+}
+
+.table td {
+    border: 1px solid white;
+}
+
+td
+{
+    width: 500px;
+}

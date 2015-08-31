@@ -17,16 +17,15 @@
 
 #categories {
     float: left;
-    width: 55%;
+    width: 10%;
     position: fixed;
 }
 
-#cardTable {
-    margin-left: 275px;
-    text-align: center;
-    overflow: hidden;
-    width: 1500px;
-    table-layout: fixed;
+#cardTable
+{
+    float:right;
+    width: 80%;
+
 }
 
 .table td {
@@ -64,7 +63,6 @@ td {
     border: none;
     resize: none;
     box-shadow: none;
-
 }
 
 .colorpicker-2x .colorpicker-saturation {

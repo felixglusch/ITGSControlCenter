@@ -7,6 +7,7 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>ITGS Control Center</title>
 
+    <script src="http://www.parsecdn.com/js/parse-1.5.0.min.js"></script>
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="css/styles.css">
 
@@ -34,7 +35,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="http://getbootstrap.com/examples/dashboard/#">ITGS Card Command</a>
+                <a class="navbar-brand" href="http://getbootstrap.com/examples/dashboard/#">ITGS Control Center</a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
@@ -50,55 +51,40 @@
 
 
     <div class="container-fluid">
-        <div class="row" id="categories">
-            <div class="col-md-2 col-sm-3">
+        <div class="row">
+            <div class="col-md-2 col-sm-3" id="categories">
                 <h3>Categories</h3>
                 <ul class="nav nav-sidebar">
-                        <li class="active"><a href="">Fancy Terms</a></li>
-                        <li><a href="">P2 Structure</a></li>
-                        <li><a href="">Solutions</a></li>
-                        <li><a href="">Statistics</a></li>
-                        <li><a href="">Facts</a></li>
-                        <li><a href="">Negative</a></li>
-                        <li><a href="">Positive</a></li>
-                        <li><a href="">Specific examples</a></li>
-                        <li><a href="">SEI Definitions</a></li>
-                    </ul>
+                    <li class="active"><a href="">Fancy Terms</a></li>
+                    <li><a href="">P2 Structure</a></li>
+                    <li><a href="">Solutions</a></li>
+                    <li><a href="">Statistics</a></li>
+                    <li><a href="">Facts</a></li>
+                    <li><a href="">Negative</a></li>
+                    <li><a href="">Positive</a></li>
+                    <li><a href="">Specific examples</a></li>
+                    <li><a href="">SEI Definitions</a></li>
+                </ul>
                 <h3>SEIs</h3>
-                    <ul class="nav nav-sidebar">
-                        <li><a href="">Digital Divide</a></li>
-                        <li><a href="">Globalization</a></li>
-                        <li><a href="">Policies</a></li>
-                        <li><a href="">People and Machines</a></li>
-                        <li><a href="">Privacy & Anonymity</a></li>
-                        <li><a href="">Surveillance</a></li>
-                        <li><a href="">Intellectual Property</a></li>
-                        <li><a href="">Standards & Protocols</a></li>
-                        <li><a href="">Authenticity</a></li>
-                        <li><a href="">Digital Citizenship</a></li>
-                    </ul>
-                </div>
+                <ul class="nav nav-sidebar">
+                    <li><a href="">Digital Divide</a></li>
+                    <li><a href="">Globalization</a></li>
+                    <li><a href="">Policies</a></li>
+                    <li><a href="">People and Machines</a></li>
+                    <li><a href="">Privacy & Anonymity</a></li>
+                    <li><a href="">Surveillance</a></li>
+                    <li><a href="">Intellectual Property</a></li>
+                    <li><a href="">Standards & Protocols</a></li>
+                    <li><a href="">Authenticity</a></li>
+                    <li><a href="">Digital Citizenship</a></li>
+                </ul>
             </div>
-
-        <table class="table" id="cardTable">
-            <tr>
-                <td>
-                    <button class="btn btn-default">Content</button>
-                </td>
-                <td>
-                    <button class="btn btn-default">Content</button>
-                </td>
-                <td>
-                    <button class="btn btn-default">Content</button>
-                </td>
-            </tr>
-
-        </table>
-
-    </div>
-
-    <div class="container">
-
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <div class="list-group marginTopSmall" id="cardTable"></div>
+            </div>
+        </div>
     </div>
 
 
@@ -107,7 +93,7 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
     <!-- my javascript -->
-    <script src="js/javascript.js"></script>
+    <script src="js/homeJS.js"></script>
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="js/ie10-viewport-bug-workaround.js"></script>

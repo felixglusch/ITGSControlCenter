@@ -1,3 +1,6 @@
+/**
+ * Created by Felix on 2015-08-31.
+ */
 $(function(){
     $('#colorPicker').colorpicker({
         customClass: 'colorpicker-2x',

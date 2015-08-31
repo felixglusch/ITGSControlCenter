@@ -1,28 +1,27 @@
-.centerText
-{
+.centerText {
     text-align: center;
 }
 
-.marginTop
-{
+.marginTop {
     margin-top: 100px;
 }
 
-#centerHorizontally
-{
+.marginTopSmall {
+    margin-top: 50px;
+}
+
+#centerHorizontally {
     width: 50%;
     margin: 0 auto;
 }
 
-#categories
-{
+#categories {
     float: left;
     width: 55%;
     position: fixed;
 }
 
-#cardTable
-{
+#cardTable {
     margin-left: 275px;
     text-align: center;
     overflow: hidden;
@@ -34,7 +33,52 @@
     border: 1px solid white;
 }
 
-td
-{
+td {
     width: 500px;
+}
+
+#cardPanel {
+    float: left;
+    width: 40%;
+    position: fixed;
+}
+
+#cardSettings {
+    float: right;
+    width: 40%;
+    margin-top: 40px;
+}
+
+.smallPadding {
+    padding: 5px;
+}
+
+#colorPicker {
+    width: 25%;
+}
+
+#cardContent
+{
+    height: 500px;
+    background-color: transparent;
+    border: none;
+    resize: none;
+    box-shadow: none;
+
+}
+
+.colorpicker-2x .colorpicker-saturation {
+    width: 200px;
+    height: 200px;
+}
+
+.colorpicker-2x .colorpicker-hue,
+.colorpicker-2x .colorpicker-alpha {
+    width: 30px;
+    height: 200px;
+}
+
+.colorpicker-2x .colorpicker-color,
+.colorpicker-2x .colorpicker-color div {
+    height: 30px;
 }

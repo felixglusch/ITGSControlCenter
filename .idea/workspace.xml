@@ -1,35 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="60a93191-6116-4ae6-a514-40e75b8f3338" name="Default" comment="First commit for ITGS card control center">
-      <change type="NEW" beforePath="" afterPath="$USER_HOME$/Developer/Web/ITGSControlCenter/fonts/glyphicons-halflings-regular.eot" />
-      <change type="NEW" beforePath="" afterPath="$USER_HOME$/Developer/Web/ITGSControlCenter/fonts/glyphicons-halflings-regular.ttf" />
-      <change type="NEW" beforePath="" afterPath="$USER_HOME$/Developer/Web/ITGSControlCenter/fonts/glyphicons-halflings-regular.woff2" />
-      <change type="NEW" beforePath="" afterPath="$USER_HOME$/Developer/Web/ITGSControlCenter/fonts/glyphicons-halflings-regular.woff" />
-      <change type="NEW" beforePath="" afterPath="$USER_HOME$/Developer/Web/ITGSControlCenter/.idea/.name" />
-      <change type="NEW" beforePath="" afterPath="$USER_HOME$/Developer/Web/ITGSControlCenter/.idea/ITGSControlCenter.iml" />
-      <change type="NEW" beforePath="" afterPath="$USER_HOME$/Developer/Web/ITGSControlCenter/css/bootstrap-theme.css.map" />
-      <change type="NEW" beforePath="" afterPath="$USER_HOME$/Developer/Web/ITGSControlCenter/css/bootstrap-theme.css" />
-      <change type="NEW" beforePath="" afterPath="$USER_HOME$/Developer/Web/ITGSControlCenter/css/bootstrap-theme.min.css" />
-      <change type="NEW" beforePath="" afterPath="$USER_HOME$/Developer/Web/ITGSControlCenter/css/bootstrap.css.map" />
-      <change type="NEW" beforePath="" afterPath="$USER_HOME$/Developer/Web/ITGSControlCenter/css/bootstrap.css" />
-      <change type="NEW" beforePath="" afterPath="$USER_HOME$/Developer/Web/ITGSControlCenter/js/bootstrap.js" />
-      <change type="NEW" beforePath="" afterPath="$USER_HOME$/Developer/Web/ITGSControlCenter/css/bootstrap.min.css" />
-      <change type="NEW" beforePath="" afterPath="$USER_HOME$/Developer/Web/ITGSControlCenter/js/bootstrap.min.js" />
-      <change type="NEW" beforePath="" afterPath="$USER_HOME$/Developer/Web/ITGSControlCenter/fonts/glyphicons-halflings-regular.svg" />
-      <change type="NEW" beforePath="" afterPath="$USER_HOME$/Developer/Web/ITGSControlCenter/home.html" />
-      <change type="NEW" beforePath="" afterPath="$USER_HOME$/Developer/Web/ITGSControlCenter/js/ie10-viewport-bug-workaround.js" />
-      <change type="NEW" beforePath="" afterPath="$USER_HOME$/Developer/Web/ITGSControlCenter/index.html" />
-      <change type="NEW" beforePath="" afterPath="$USER_HOME$/Developer/Web/ITGSControlCenter/js/javascript.js" />
-      <change type="NEW" beforePath="" afterPath="$USER_HOME$/Developer/Web/ITGSControlCenter/js/jquery-ui.js" />
-      <change type="NEW" beforePath="" afterPath="$USER_HOME$/Developer/Web/ITGSControlCenter/js/jquery.min.js" />
-      <change type="NEW" beforePath="" afterPath="$USER_HOME$/Developer/Web/ITGSControlCenter/.idea/jsLibraryMappings.xml" />
-      <change type="NEW" beforePath="" afterPath="$USER_HOME$/Developer/Web/ITGSControlCenter/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$USER_HOME$/Developer/Web/ITGSControlCenter/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$USER_HOME$/Developer/Web/ITGSControlCenter/js/npm.js" />
-      <change type="NEW" beforePath="" afterPath="$USER_HOME$/Developer/Web/ITGSControlCenter/css/styles.css" />
-      <change type="NEW" beforePath="" afterPath="$USER_HOME$/Developer/Web/ITGSControlCenter/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$USER_HOME$/Developer/Web/ITGSControlCenter/.idea/workspace.xml" />
+    <list default="true" id="60a93191-6116-4ae6-a514-40e75b8f3338" name="Default" comment="Card view and settings page">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/bootstrap-colorpicker.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/bootstrap-colorpicker.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/bootstrap-colorpicker.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/bootstrap-colorpicker.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/card.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/javascript.js" afterPath="$PROJECT_DIR$/js/javascript.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/styles.css" afterPath="$PROJECT_DIR$/css/styles.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="ITGSDashboard.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -49,20 +29,46 @@
     <favorites_list name="ITGSDashboard" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="javascript.js" pinned="false" current-in-tab="true">
-        <entry file="file://$USER_HOME$/Developer/Web/ITGSControlCenter/js/javascript.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.08401977">
-              <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.59586465">
+      <split-first>
+        <leaf>
+          <file leaf-file-name="javascript.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/js/javascript.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0">
+                  <caret line="1" column="19" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="19" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="card.html" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/card.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.39081746">
+                  <caret line="101" column="30" selection-start-line="101" selection-start-column="30" selection-end-line="101" selection-end-column="30" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file leaf-file-name="styles.css" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/css/styles.css">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.55603915">
+                  <caret line="65" column="20" selection-start-line="65" selection-start-column="20" selection-end-line="65" selection-end-column="20" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -72,17 +78,21 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$USER_HOME$/Developer/Web/ITGSControlCenter" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$USER_HOME$/Developer/Web/ITGSDashboard/js/javascript.js" />
-        <option value="$USER_HOME$/Developer/Web/ITGSDashboard/index.html" />
-        <option value="$USER_HOME$/Developer/Web/Dashboard_bootstrap_example/Dashboard Template for Bootstrap.html" />
-        <option value="$USER_HOME$/Developer/Web/ITGSDashboard/css/styles.css" />
-        <option value="$USER_HOME$/Developer/Web/ITGSDashboard/home.html" />
-        <option value="$USER_HOME$/Developer/Web/ITGSControlCenter/js/javascript.js" />
+        <option value="$PROJECT_DIR$/../ITGSDashboard/js/javascript.js" />
+        <option value="$PROJECT_DIR$/../ITGSDashboard/index.html" />
+        <option value="$PROJECT_DIR$/../Dashboard_bootstrap_example/Dashboard Template for Bootstrap.html" />
+        <option value="$PROJECT_DIR$/../ITGSDashboard/css/styles.css" />
+        <option value="$PROJECT_DIR$/../ITGSDashboard/home.html" />
+        <option value="$PROJECT_DIR$/home.html" />
+        <option value="$PROJECT_DIR$/color.html" />
+        <option value="$PROJECT_DIR$/js/javascript.js" />
+        <option value="$PROJECT_DIR$/css/styles.css" />
+        <option value="$PROJECT_DIR$/viewCard.html" />
       </list>
     </option>
   </component>
@@ -106,7 +116,7 @@
     <OptionsSetting value="true" id="Update" />
     <OptionsSetting value="true" id="Status" />
     <OptionsSetting value="true" id="Edit" />
-    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="2" id="Add" />
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectView">
@@ -122,10 +132,22 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ITGSControlCenter" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="parse-1.5.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="ITGSControlCenter" />
@@ -166,6 +188,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -173,17 +197,23 @@
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="recentsLimit" value="5" />
     <property name="FullScreen" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Developer/Web/ITGSControlCenter" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../courses/TheCompleteWebDevelopmentCourse/4_jQuery/CodePlayer" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
   </component>
-  <component name="RunManager" selected="JavaScript Debug.home.html">
-    <configuration default="false" name="javascript.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-js-file="$USER_HOME$/Developer/Web/ITGSControlCenter/js/javascript.js" working-dir="$USER_HOME$/Developer/Web/ITGSControlCenter/js">
+  <component name="RunManager" selected="JavaScript Debug.card.html">
+    <configuration default="false" name="javascript.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-js-file="$PROJECT_DIR$/js/javascript.js" working-dir="$PROJECT_DIR$/js">
       <method />
     </configuration>
     <configuration default="false" name="index.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/ITGSDashboard/index.html">
       <method />
     </configuration>
     <configuration default="false" name="home.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/ITGSDashboard/home.html">
+      <method />
+    </configuration>
+    <configuration default="false" name="card.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/ITGSControlCenter/card.html">
+      <method />
+    </configuration>
+    <configuration default="false" name="color.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/ITGSControlCenter/color.html">
       <method />
     </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
@@ -224,16 +254,20 @@
       <envs />
       <method />
     </configuration>
-    <list size="3">
+    <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Node.js.javascript.js" />
       <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.index.html" />
       <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.home.html" />
+      <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.card.html" />
+      <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.color.html" />
     </list>
     <recent_temporary>
-      <list size="3">
-        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.home.html" />
-        <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.index.html" />
-        <item index="2" class="java.lang.String" itemvalue="Node.js.javascript.js" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.card.html" />
+        <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.color.html" />
+        <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.home.html" />
+        <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.index.html" />
+        <item index="4" class="java.lang.String" itemvalue="Node.js.javascript.js" />
       </list>
     </recent_temporary>
   </component>
@@ -248,15 +282,27 @@
       <option name="number" value="Default" />
       <updated>1440466230422</updated>
     </task>
+    <task id="LOCAL-00001" summary="First commit for ITGS card control center">
+      <created>1440980255676</created>
+      <option name="number" value="00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1440980255676</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Renamed title to ITGS Control Center in home.html">
+      <created>1440980633109</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1440980633109</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.11770833" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32946146" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -266,6 +312,7 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32946146" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -287,46 +334,15 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First commit for ITGS card control center" />
-    <option name="LAST_COMMIT_MESSAGE" value="First commit for ITGS card control center" />
+    <MESSAGE value="Renamed title to ITGS Control Center in home.html" />
+    <option name="LAST_COMMIT_MESSAGE" value="Renamed title to ITGS Control Center in home.html" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/Developer/Web/ITGSControlCenter/js/javascript.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Developer/Web/ITGSControlCenter/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="42" column="32" selection-start-line="42" selection-start-column="32" selection-end-line="42" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Developer/Web/ITGSControlCenter/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="105" column="0" selection-start-line="105" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Developer/Web/Dashboard_bootstrap_example/Dashboard Template for Bootstrap.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Developer/Web/ITGSControlCenter/css/styles.css">
+    <entry file="file://$PROJECT_DIR$/js/javascript.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -334,7 +350,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Developer/Web/ITGSControlCenter/js/javascript.js">
+    <entry file="file://$PROJECT_DIR$/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/javascript.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
@@ -342,7 +366,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Developer/Web/ITGSControlCenter/index.html">
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="42" column="32" selection-start-line="42" selection-start-column="32" selection-end-line="42" selection-end-column="32" />
@@ -350,7 +374,46 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Developer/Web/ITGSControlCenter/home.html">
+    <entry file="file://$PROJECT_DIR$/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="105" column="0" selection-start-line="105" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Dashboard_bootstrap_example/Dashboard Template for Bootstrap.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/javascript.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="42" column="32" selection-start-line="42" selection-start-column="32" selection-end-line="42" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/home.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="94" column="0" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
@@ -358,15 +421,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Developer/Web/Dashboard_bootstrap_example/Dashboard Template for Bootstrap.html">
+    <entry file="file://$PROJECT_DIR$/../Dashboard_bootstrap_example/Dashboard Template for Bootstrap.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Developer/Web/ITGSControlCenter/css/styles.css">
+    <entry file="file://$PROJECT_DIR$/css/styles.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -374,7 +436,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Developer/Web/ITGSControlCenter/css/styles.css">
+    <entry file="file://$PROJECT_DIR$/css/styles.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -382,7 +444,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Developer/Web/ITGSControlCenter/index.html">
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
@@ -390,7 +452,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Developer/Web/ITGSControlCenter/js/javascript.js">
+    <entry file="file://$PROJECT_DIR$/js/javascript.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -398,45 +460,50 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Developer/Web/ITGSControlCenter/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.68985176">
-          <caret line="105" column="0" selection-start-line="105" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Developer/Web/ITGSControlCenter/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.53477764">
-          <caret line="42" column="32" selection-start-line="42" selection-start-column="32" selection-end-line="42" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Developer/Web/Dashboard_bootstrap_example/Dashboard Template for Bootstrap.html">
+    <entry file="file://$PROJECT_DIR$/../Dashboard_bootstrap_example/Dashboard Template for Bootstrap.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.60918254">
+          <caret line="65" column="25" selection-start-line="55" selection-start-column="16" selection-end-line="65" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Developer/Web/ITGSControlCenter/css/styles.css">
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5271318">
-          <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
+        <state vertical-scroll-proportion="0.36282194">
+          <caret line="31" column="58" selection-start-line="31" selection-start-column="58" selection-end-line="31" selection-end-column="58" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Developer/Web/ITGSControlCenter/js/javascript.js">
+    <entry file="file://$PROJECT_DIR$/css/styles.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.08401977">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.55603915">
+          <caret line="65" column="20" selection-start-line="65" selection-start-column="20" selection-end-line="65" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/javascript.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1" column="19" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/card.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.39081746">
+          <caret line="101" column="30" selection-start-line="101" selection-start-column="30" selection-end-line="101" selection-end-column="30" />
+          <folding />
         </state>
       </provider>
     </entry>

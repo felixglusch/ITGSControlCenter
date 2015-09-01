@@ -15,6 +15,11 @@
     margin: 0 auto;
 }
 
+.nav-sidebar
+{
+    width: 250px;
+}
+
 #categories {
     float: left;
     width: 10%;

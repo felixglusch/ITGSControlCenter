@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="itgsApp">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,23 +7,16 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>ITGS Control Center</title>
 
+    <script src="http://www.parsecdn.com/js/parse-1.5.0.min.js"></script>
     <script type="text/javascript" src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="js/ie10-viewport-bug-workaround.js"></script>
-
-    <!-- my css -->
-    <link rel="stylesheet" type="text/css" href="css/styles.css">
-    <!-- Bootstrap -->
+    <script src="js/angular.js"></script>
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <!-- Custom styles for this template  -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Custom styles for this template -->
     <link href="http://getbootstrap.com/examples/dashboard/dashboard.css" rel="stylesheet">
 
-    <link rel="stylesheet" type="text/css" href="css/bootstrap-colorpicker.min.css">
-    <script src="js/bootstrap-colorpicker.min.js"></script>
-
-    <!-- my javascript -->
-    <script src="js/homeJS.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -32,125 +25,23 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-
 </head>
 <body>
 
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container-fluid">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="http://getbootstrap.com/examples/dashboard/#">ITGS Control Center</a>
-            </div>
-            <div id="navbar" class="navbar-collapse collapse">
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="http://getbootstrap.com/examples/dashboard/#">Settings</a></li>
-                    <li><a href="http://getbootstrap.com/examples/dashboard/#">Profile</a></li>
-                </ul>
-                <form class="navbar-form navbar-right">
-                    <input type="text" class="form-control" placeholder="Search...">
-                </form>
+                <a class="navbar-brand" href="#">ITGS Control Center</a>
             </div>
         </div>
     </div>
 
+    <!-- THE TEMPLATE FROM pages/card.html IS LOADED HERE -->
+    <div ng-view></div>
 
-
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-10 col-md-offset-1">
-                <div class="panel panel-default marginTopSmall" id="cardPanel">
-                    <div class="panel-heading">
-                        <h3 class="panel-title">Card Title</h3>
-                    </div>
-                    <div class="panel-body">
-                        <form class="form-group">
-                            <label for="cardContent"></label>
-                            <textarea class="form-control" id="cardContent" required="required" >
-1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-2. Fusce eleifend leo quis nibh posuere, ut aliquam metus molestie.
-3. Aliquam imperdiet neque vehicula ipsum viverra mattis.
-4. Ut vehicula eros eu erat sollicitudin ornare.
-5. Praesent scelerisque felis id lorem molestie cursus.
-6. Fusce ut libero aliquet, posuere odio sed, feugiat elit.
-7. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-8. Fusce eleifend leo quis nibh posuere, ut aliquam metus molestie.
-9. Aliquam imperdiet neque vehicula ipsum viverra mattis.
-10. Ut vehicula eros eu erat sollicitudin ornare.
-11. Praesent scelerisque felis id lorem molestie cursus.
-12. Fusce ut libero aliquet, posuere odio sed, feugiat elit.</textarea>
-                        </form>
-                    </div>
-                </div>
-
-                <div id="cardSettings">
-                    <h3><span class="glyphicon glyphicon-cog"></span> Card Settings</h3>
-                    <hr>
-                    <form class="form">
-<!--
-                        <div class="form-group">
-                            <input type="button" class="btn btn-primary" value="Edit Card Content" />
-                        </div>
--->
-
-                        <div class="form-group">
-                            <label for="category">Category</label>
-                            <div class="dropdown" id="category">
-                                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu"
-                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" >
-                                    Dropdown
-                                    <span class="caret"></span>
-                                </button>
-                                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                                    <li><a href="">Fancy Terms</a></li>
-                                    <li><a href="">P2 Structure</a></li>
-                                    <li><a href="">Solutions</a></li>
-                                    <li><a href="">Statistics</a></li>
-                                    <li><a href="">Facts</a></li>
-                                    <li><a href="">Negative</a></li>
-                                    <li><a href="">Positive</a></li>
-                                    <li><a href="">Specific examples</a></li>
-                                    <li><a href="">SEI Definitions</a></li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <label for="colorPicker">Card Colour</label>
-                        <div class="input-group form-group" id="colorPicker" >
-                            <input type="text" value="" placeholder="#ff0000" class="form-control" />
-                            <span class="input-group-addon"><i></i></span>
-                        </div>
-
-
-                        <div class="form-group">
-                            <label >Social & Ethical Issues</label>
-                            <div class="checkbox">
-                                <label class="smallPadding"><input type="checkbox" value=""> Digital Divide</label>
-                                <label class="smallPadding"><input type="checkbox" value=""> Globalization and Cultural Diversity</label>
-                                <label class="smallPadding"><input type="checkbox" value=""> Policies</label>
-                                <label class="smallPadding"><input type="checkbox" value=""> People and Machines</label>
-                                <label class="smallPadding"><input type="checkbox" value=""> Privacy and Anonymity</label>
-                                <label class="smallPadding"><input type="checkbox" value=""> Surveillance</label>
-                                <label class="smallPadding"><input type="checkbox" value=""> Intellectual Property</label>
-                                <label class="smallPadding"><input type="checkbox" value=""> Standards and Protocols</label>
-                                <label class="smallPadding"><input type="checkbox" value=""> Authenticity</label>
-                                <label class="smallPadding"><input type="checkbox" value=""> Digital Citizenship</label>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <input type="button" class="btn btn-primary" value="Save Card Content" />
-                        </div>
-
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
+    <script src="js/app.js"></script>
+    <script src="services/queries.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
 </body>
 </html>

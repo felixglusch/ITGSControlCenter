@@ -20,7 +20,6 @@
     <link rel="stylesheet" type="text/css" href="css/styles.css">
 
 
-
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -30,19 +29,25 @@
 
 </head>
 <body data-spy="scroll" data-target="#categories">
-
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                        aria-expanded="false" aria-controls="navbar">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="http://getbootstrap.com/examples/dashboard/#">ITGS Control Center</a>
+                <a class="navbar-brand" href="#">ITGS Control Center</a>
+
             </div>
             <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#categoryCards">Category</a></li>
+                    <li><a href="#unitCards">Unit</a></li>
+                </ul>
+
                 <ul class="nav navbar-nav navbar-right">
                     <!--<li><a href="http://getbootstrap.com/examples/dashboard/#">Settings</a></li>
                     <li><a href="http://getbootstrap.com/examples/dashboard/#">Profile</a></li>-->
@@ -54,23 +59,12 @@
         </div>
     </div>
 
-
-    <div class="container" ng-controller="homeController">
-        <div class="row">
-            <div class="col-md-2 col-sm-3" id="categories">
-                <h3>Categories</h3>
-                <ul class="nav nav-sidebar" id="categoryNavList"></ul>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6 col-md-offset-3">
-                <div class="list-group " id="cardTable"></div>
-            </div>
-        </div>
-    </div>
+    <!-- THE TEMPLATE FROM pages/home.html IS LOADED HERE -->
+    <div ng-view></div>
 
 
-    <script src="js/homeJS.js"></script>
+    <script src="js/app.js"></script>
+    <script src="services/queries.js"></script>
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="js/ie10-viewport-bug-workaround.js"></script>

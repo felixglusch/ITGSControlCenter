@@ -2,6 +2,11 @@
     text-align: center;
 }
 
+
+.textAlign {
+    text-align: left;
+}
+
 .marginTop {
     margin-top: 100px;
 }
@@ -31,6 +36,10 @@ h3:before {
     float: left;
     width: 10%;
     position: fixed;
+}
+
+#buttonFloat {
+    float: right;
 }
 
 #cardTable

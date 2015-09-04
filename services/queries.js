@@ -1,10 +1,8 @@
 /**
  * Created by Felix on 2015-09-02.
  */
-itgsApp.service('cardCatQueryService', function () {
-
+itgsApp.service('cardCategoryService', function () {
     return {
-
         queryCategories: function() {
             var CardCategories = Parse.Object.extend("CardCategories");
             var cardCategoryQuery = new Parse.Query(CardCategories);
@@ -29,9 +27,10 @@ itgsApp.service('cardCatQueryService', function () {
 
 
 
-itgsApp.service('cardDataQueryService', function () {
+itgsApp.service('cardDataService', function () {
     var dict = {};
     var table = [];
+    var colours = [];
     return {
         getCardBody: function (key) {
             return dict[key];
@@ -59,7 +58,8 @@ itgsApp.service('cardDataQueryService', function () {
                         var body = object.get('text');
                         dict[title] = body;
                         //console.log("The value at (" + title + ") is (" + dict[title] + ")");
-
+                        var colour = object.get('colourID');
+                        colours.splice(colours.length, 0, colour);
                         var currentCatID = object.get('category');
                         // TODO: remove DOM modifications from service. They work here, but it's not best practice.
                         if (currentCatID != previousCatID) {
@@ -69,8 +69,7 @@ itgsApp.service('cardDataQueryService', function () {
                         }
                         previousCatID = currentCatID;
                         list.append('<button name="btnListItem" class="list-group-item">' + title + '</button>');
-                        //table.    splice(table.length, 0, title);
-
+                        //table.splice(table.length, 0, title);
                     }
                 },
                 error: function (error) {

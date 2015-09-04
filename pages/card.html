@@ -29,15 +29,7 @@
                                 <span class="caret"></span>
                             </button>
                             <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                                <li><a href="">Fancy Terms</a></li>
-                                <li><a href="">P2 Structure</a></li>
-                                <li><a href="">Solutions</a></li>
-                                <li><a href="">Statistics</a></li>
-                                <li><a href="">Facts</a></li>
-                                <li><a href="">Negative</a></li>
-                                <li><a href="">Positive</a></li>
-                                <li><a href="">Specific examples</a></li>
-                                <li><a href="">SEI Definitions</a></li>
+                                <li ng-repeat="category in cardCategories"><a ng-show="$index > 0" href="">{{category}}</a></li>
                             </ul>
                         </div>
                     </div>

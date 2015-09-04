@@ -4,6 +4,7 @@
 itgsApp.service('sharedProperties', function () {
     var title = 'title';
     var body = 'body';
+    var cardCategories = [];
     return {
         getTitle: function() {
             return title;
@@ -16,6 +17,14 @@ itgsApp.service('sharedProperties', function () {
         },
         setBody: function(val) {
             body = val;
+        },
+        getCategories: function () {
+            return cardCategories;
+        },
+        setCategories: function(val){
+            cardCategories = val;
         }
+
+
     };
 });

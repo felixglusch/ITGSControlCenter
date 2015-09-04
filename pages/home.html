@@ -2,7 +2,11 @@
     <div class="row">
         <div class="col-md-2 col-sm-3" id="categories">
             <h3>Categories</h3>
-            <ul class="nav nav-sidebar" id="categoryNavList"></ul>
+            <ul class="nav nav-sidebar">
+                <li><a ng-repeat="category in categories" ng-show="$index > 0"
+                       href="#category{{$index+1}}">{{ category }}</a></li>
+
+            </ul>
         </div>
     </div>
     <div class="row">
@@ -11,8 +15,12 @@
                 <button class="btn btn-success">Create New Card</button>
                 <button class="btn btn-danger">Delete Cards</button>
                 <button class="btn btn-primary">Assign Cards</button>
-                <div class="form-group" id="cardTable"></div>
+                <div class="form-group marginTopSmall" id="cardTable">
+<!--                    <button ng-repeat="row in cardTable track by $index" name="btnListItem"
+                            class="list-group-item">{{ row }}</button>-->
+                </div>
             </div>
         </form>
     </div>
 </div>
+

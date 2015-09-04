@@ -2,51 +2,42 @@
  * Created by Felix on 2015-09-02.
  */
 itgsApp.service('cardCatQueryService', function () {
-    this.queryCategories = function () {
-        var navCatList = $("#categoryNavList");
 
-        var CardCategories = Parse.Object.extend("CardCategories");
-        var cardCategoryQuery = new Parse.Query(CardCategories);
-        cardCategoryQuery.exists("category");
-        cardCategoryQuery.exists("categoryID");
-        cardCategoryQuery.ascending("categoryID");
-        cardCategoryQuery.find({
-            success: function (results) {
+    return {
 
-                //console.log("success, card category query");
-                for (var i = 0; i < results.length; i++) {
-                    var object = results[i];
-                    var category = object.get('category');
-                    categoryList.splice(categoryList.length, 0, category);
-                }
-
-                for (var i = 1; i < categoryList.length; i++) {
-                    if (i == 1) {
-                        navCatList.append('<li class="active"><a href="#category' + i
-                            + '">' + categoryList[i] + '</a></li>');
-                    } else {
-                        navCatList.append('<li><a href="#category' + i
-                            + '">' + categoryList[i] + '</a></li>');
+        queryCategories: function() {
+            var CardCategories = Parse.Object.extend("CardCategories");
+            var cardCategoryQuery = new Parse.Query(CardCategories);
+            cardCategoryQuery.exists("category");
+            cardCategoryQuery.exists("categoryID");
+            cardCategoryQuery.ascending("categoryID");
+            cardCategoryQuery.find({
+                success: function (results) {
+                    for (var i = 0; i < results.length; i++) {
+                        var object = results[i];
+                        var category = object.get('category');
+                        categoryList.splice(categoryList.length, 0, category);
                     }
+                },
+                error: function (error) {
+                    alert("Error: " + error.code + " " + error.message);
                 }
-                console.log(categoryList);
-
-            },
-            error: function (error) {
-                alert("Error: " + error.code + " " + error.message);
-            }
-        });
-    }
+            });
+        }
+    };
 });
 
 
 
 itgsApp.service('cardDataQueryService', function () {
     var dict = {};
-
+    var table = [];
     return {
         getCardBody: function (key) {
             return dict[key];
+        },
+        getDataTable: function(){
+            return table;
         },
         queryData: function () {
 
@@ -70,12 +61,16 @@ itgsApp.service('cardDataQueryService', function () {
                         //console.log("The value at (" + title + ") is (" + dict[title] + ")");
 
                         var currentCatID = object.get('category');
+                        // TODO: remove DOM modifications from service. They work here, but it's not best practice.
                         if (currentCatID != previousCatID) {
+                            //table.splice(table.length, 0, categoryList[currentCatID]);
                             list.append('<h3 class="cardCategory" id="category'
                                 + currentCatID + '">' + categoryList[currentCatID] + '</h3>')
                         }
                         previousCatID = currentCatID;
-                        list.append('<button  name="btnListItem" class="list-group-item">' + title + '</button>');
+                        list.append('<button name="btnListItem" class="list-group-item">' + title + '</button>');
+                        //table.    splice(table.length, 0, title);
+
                     }
                 },
                 error: function (error) {
@@ -86,6 +81,34 @@ itgsApp.service('cardDataQueryService', function () {
     }
 });
 
+itgsApp.service('seiService', function() {
+    var titles = [];
 
+    return {
+        getSEITitles: function(){
+            return titles;
+        },
+        querySEIs: function() {
+            var title = "";
+            var SEI = Parse.Object.extend("SEI");
+            var seiQuery = new Parse.Query(SEI);
+            seiQuery.ascending("SEIid");
+            seiQuery.exists("title");
+            seiQuery.find({
+                success: function (results) {
+                    for (var i = 0; i < results.length; i++) {
+                        var object = results[i];
+                        title = " " + object.get('title');
+                        //var htmlElement = '<label class="smallPadding"><input type="checkbox">' + title + '</label>';
+                        titles.splice(titles.length , 0, title);
+                    }
+                },
+                error: function (error) {
+                    alert("Error: " + error.code + " " + error.message);
+                }
+            });
+        }
+    };
+});
 
 

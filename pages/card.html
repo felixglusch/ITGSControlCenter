@@ -3,12 +3,12 @@
         <div class="col-md-10 col-md-offset-1">
             <div class="panel panel-default marginTopSmall" id="cardPanel">
                 <div class="panel-heading">
-                    <h3 class="panel-title" id="title">{{ sharedTitle() }}</h3>
+                    <h3 class="panel-title" id="titleContent" contenteditable="true">{{ properties.title }}</h3>
                 </div>
                 <div class="panel-body">
                     <form class="form-group">
                         <label for="cardContent"></label>
-                        <textarea class="form-control" id="cardContent" required="required" >{{ sharedBody() }}</textarea>
+                        <textarea class="form-control" id="cardContent" required="required" >{{ properties.content }}</textarea>
                     </form>
                 </div>
             </div>
@@ -18,31 +18,32 @@
                 <hr>
                 <form class="form">
 
-
-
+                    <label for="category">Category</label>
                     <div class="form-group">
-                        <label for="category">Category</label>
-                        <div class="dropdown" id="category">
-                            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" >
-                                Dropdown
-                                <span class="caret"></span>
-                            </button>
-                            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                                <li ng-repeat="category in cardCategories"><a ng-show="$index > 0" href="">{{category}}</a></li>
-                            </ul>
-                        </div>
+                        <!-- ng-model here binds the category data received from home to the select attribute
+                        Eg. the selected card category appears as default here. -->
+                        <select id="category" ng-model="properties.category">
+                            <option ng-repeat="category in properties.categories"
+                                    ng-if="$index > 0" value="{{ category }}"
+                                    >{{ category }}</option>
+                        </select>
                     </div>
 
-                    <div class="form-group">
-                        <label for="colorPicker">Card Colour</label>
-                        <input id="colorPicker" type="color">
+                    <label for="colorPicker">Card Colour</label>
+                    <div class="form-group input-group">
+                        <input class="form-control" type="text"
+                               ng-model="properties.colour" value="{{properties.colour}}"  />
+                        <span class="input-group-addon">
+                            <input id="colorPicker" type="color"
+                                   ng-model="properties.colour" value="{{properties.colour}}">
+                        </span>
                     </div>
 
                     <div class="form-group">
                         <label >Social & Ethical Issues</label>
                         <div class="checkbox" >
-                            <label ng-repeat="sei in seiList" class="smallPadding"><input type="checkbox">{{ sei }}</label>
+                            <label ng-repeat="sei in properties.seis" class="smallPadding">
+                                <input type="checkbox" >{{ sei }}</label>
                         </div>
                     </div>
 

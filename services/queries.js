@@ -25,22 +25,13 @@ itgsApp.service('cardCategoryService', function () {
     };
 });
 
-
-
 itgsApp.service('cardDataService', function () {
     var dict = {};
-    var table = [];
-    var colours = [];
     return {
-        getCardBody: function (key) {
-            return dict[key];
-        },
-        getDataTable: function(){
-            return table;
+        getCardData: function (title, value) {
+            return dict[title].get(value);
         },
         queryData: function () {
-
-
             var CardData = Parse.Object.extend("CardData");
             var cardDataQuery = new Parse.Query(CardData);
             cardDataQuery.limit(1000);
@@ -53,14 +44,12 @@ itgsApp.service('cardDataService', function () {
                     var list = $("#cardTable");
                     for (var i = 0; i < results.length; i++) {
 
-                        var object = results[i];
-                        var title = object.get('title');
-                        var body = object.get('text');
-                        dict[title] = body;
+                        var cardObject = results[i];
+                        var title = cardObject.get('title');
+                        dict[title] = cardObject;
                         //console.log("The value at (" + title + ") is (" + dict[title] + ")");
-                        var colour = object.get('colourID');
-                        colours.splice(colours.length, 0, colour);
-                        var currentCatID = object.get('category');
+
+                        var currentCatID = cardObject.get('category');
                         // TODO: remove DOM modifications from service. They work here, but it's not best practice.
                         if (currentCatID != previousCatID) {
                             //table.splice(table.length, 0, categoryList[currentCatID]);
@@ -71,12 +60,58 @@ itgsApp.service('cardDataService', function () {
                         list.append('<button name="btnListItem" class="list-group-item">' + title + '</button>');
                         //table.splice(table.length, 0, title);
                     }
+                    //console.log(dict);
                 },
                 error: function (error) {
                     alert("Error: " + error.code + " " + error.message);
                 }
             });
         }
+    }
+});
+
+itgsApp.service('seiDataService', function () {
+    var dict = {};
+    return {
+        getCardData: function (cardId, value) {
+            // could be more than one SEI per card
+            function hasMoreSeis(counter) {
+                return dict[counter].get("card") == cardId;
+            }
+
+            var seiIDs = [];
+            if (value == "SEI") {
+                var counter = cardId;
+                while (hasMoreSeis(counter)) {
+                    var seiId = dict[counter].get("SEI");
+                    seiIDs.splice(seiIDs.length, 0, seiId);
+                    counter += 1;
+                }
+            } else {
+                return dict[cardId].get(value);
+            }
+
+        },
+        queryData: function () {
+            var SeiData = Parse.Object.extend("CardsSEIs");
+            var seiDataQuery = new Parse.Query(SeiData);
+            seiDataQuery.ascending('card');
+            seiDataQuery.limit(1000);
+            seiDataQuery.find({
+                success: function (results) {
+                    for (var i = 1; i <= results.length; i++) {
+                        //var seiObject = results[i];
+                        //var cardId = seiObject.get('card');
+                        dict[i] = results[i];
+                    }
+                    console.log(dict);
+                },
+                error: function (error) {
+                    alert("Error: " + error.code + " " + error.message);
+                }
+            });
+        }
+
     }
 });
 

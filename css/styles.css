@@ -73,8 +73,17 @@ td {
 }
 
 #colorPicker {
-    width: 25px;
-    height: 25px;
+    width: 43px;
+    height: 20px;
+}
+
+#textColour {
+    width: 25%;
+}
+
+#titleContent{
+    outline:0 !important;
+    -webkit-appearance:none;
 }
 
 #cardContent
@@ -86,18 +95,4 @@ td {
     box-shadow: none;
 }
 
-.colorpicker-2x .colorpicker-saturation {
-    width: 200px;
-    height: 200px;
-}
 
-.colorpicker-2x .colorpicker-hue,
-.colorpicker-2x .colorpicker-alpha {
-    width: 30px;
-    height: 200px;
-}
-
-.colorpicker-2x .colorpicker-color,
-.colorpicker-2x .colorpicker-color div {
-    height: 30px;
-}

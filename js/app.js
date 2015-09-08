@@ -4,56 +4,55 @@ var categoryList = ["0 placeholder"];
 
 
 itgsApp.controller('homeController', ['$scope', 'cardCategoryService',
-    'cardDataService', 'sharedProperties', '$location', '$timeout',
-    function ($scope, cardCategoryService, cardDataService, sharedProperties, $location, $timeout) {
+    'cardDataService', 'seiDataService','sharedProperties',
+    '$location', '$timeout',
+    function ($scope, cardCategoryService, cardDataService, seiDataService,sharedProperties,
+              $location, $timeout) {
         angular.element(document).ready(function () {
             cardCategoryService.queryCategories();
             cardDataService.queryData();
-
+            seiDataService.queryData();
         });
-
 
         $timeout(function(){
             $scope.categories = categoryList;
             sharedProperties.setCategories($scope.categories);
-            //$scope.cardTable = cardDataService.getDataTable();
-            //console.log($scope.cardTable);
-        }, 150);
-
+        }, 450);
 
         $('body').on("click", "button[name=btnListItem]", function () {
-            // gets the text of the card (title)
             var title = $(this).text();
-            var body = cardDataService.getCardBody(title);
+            // Get attribute (2nd param) with this title (1st param)
+            var body = cardDataService.getCardData(title, "text");
+            var colour = cardDataService.getCardData(title, "colourID");
+            var categoryID = cardDataService.getCardData(title, "category");
+            var cardID = cardDataService.getCardData(title, "cardId");
 
-            /* - Category
-             * - Color
-             * - SEIs
-             */
+            // Get attribute (2nd param) with this card id number (1st param)... array
+            var seiIDs = seiDataService.getCardData(cardID, "SEI");
 
             sharedProperties.setTitle(title);
             sharedProperties.setBody(body);
+            sharedProperties.setColour(colour);
+            sharedProperties.setSingleCategory(categoryID);
+            sharedProperties.setCardSEI_Id(seiID);
             $location.path('/card')
         });
     }]);
 
 itgsApp.controller('cardController', ['$scope', 'sharedProperties', 'seiService', '$timeout',
     function ($scope, sharedProperties, seiService, $timeout) {
-        $scope.sharedTitle = function () {
-            return sharedProperties.getTitle();
-        };
-        $scope.sharedBody = function () {
-            return sharedProperties.getBody();
-        };
-
-        $scope.cardCategories = sharedProperties.getCategories();
-
-        // The query that gets the list of SEIs for the checkbox list
         seiService.querySEIs();
         $timeout(function () {
-            // sets the scope variable seiList to the array of sei titles for use in ng-repeat in card.html
-            $scope.seiList = seiService.getSEITitles();
-        }, 500);
+            $scope.properties = {
+                title: sharedProperties.getTitle(),
+                content: sharedProperties.getBody(),
+                categories: sharedProperties.getCategories(),
+                category: sharedProperties.getSingleCategory(),
+                colour: sharedProperties.getColour(),
+                seis: seiService.getSEITitles(),
+                seiID: sharedProperties.getCardSEI_Id()
+            };
+        }, 350);
 
     }]);
 

@@ -72,25 +72,35 @@ itgsApp.service('cardDataService', function () {
 
 itgsApp.service('seiDataService', function () {
     var dict = {};
+    var dictSEIs = [];
+    var dictCards = []  ;
     return {
         getCardData: function (cardId, value) {
-            // could be more than one SEI per card
-            function hasMoreSeis(counter) {
-                return dict[counter].get("card") == cardId;
-            }
-
             var seiIDs = [];
             if (value == "SEI") {
-                var counter = cardId;
-                while (hasMoreSeis(counter)) {
-                    var seiId = dict[counter].get("SEI");
+                var cardIndex = dictCards.indexOf(cardId);
+                console.log("init cardIndex " + cardIndex);
+                do {
+                    var seiId = dictSEIs[cardIndex];
+                    console.log("seiID" + seiId);
                     seiIDs.splice(seiIDs.length, 0, seiId);
-                    counter += 1;
-                }
+                    cardIndex += 1;
+                } while (hasMoreSeis(cardIndex));
+
+
+                console.log("seiIDs: ");
+                console.log(seiIDs);
+                return seiIDs;
             } else {
                 return dict[cardId].get(value);
             }
 
+            function hasMoreSeis(cardIndex) {
+                console.log("cardIndex " + cardIndex);
+                console.log(dictCards[cardIndex - 1]);
+                console.log(dictCards[cardIndex]);
+                return dictCards[cardIndex - 1] == dictCards[cardIndex];
+            }
         },
         queryData: function () {
             var SeiData = Parse.Object.extend("CardsSEIs");
@@ -99,12 +109,12 @@ itgsApp.service('seiDataService', function () {
             seiDataQuery.limit(1000);
             seiDataQuery.find({
                 success: function (results) {
-                    for (var i = 1; i <= results.length; i++) {
-                        //var seiObject = results[i];
-                        //var cardId = seiObject.get('card');
+                    for (var i = 0; i < results.length; i++) {
                         dict[i] = results[i];
+                        dictSEIs[i] = results[i].get("SEI");
+                        dictCards[i] = results[i].get("card");
                     }
-                    console.log(dict);
+                    //console.log(dict);
                 },
                 error: function (error) {
                     alert("Error: " + error.code + " " + error.message);

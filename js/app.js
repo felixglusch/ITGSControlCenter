@@ -2,7 +2,6 @@ var itgsApp = angular.module('itgsApp', ['ngRoute', 'colorpicker.module']);
 // TODO: remove below variable from global scope
 var categoryList = ["0 placeholder"];
 
-
 itgsApp.controller('homeController', ['$scope', 'cardCategoryService',
     'cardDataService', 'seiDataService','sharedProperties',
     '$location', '$timeout',
@@ -26,7 +25,7 @@ itgsApp.controller('homeController', ['$scope', 'cardCategoryService',
             var colour = cardDataService.getCardData(title, "colourID");
             var categoryID = cardDataService.getCardData(title, "category");
             var cardID = cardDataService.getCardData(title, "cardId");
-
+            console.log("card ID " + cardID);
             // Get attribute (2nd param) with this card id number (1st param)... array
             var seiIDs = seiDataService.getCardData(cardID, "SEI");
 
@@ -34,7 +33,7 @@ itgsApp.controller('homeController', ['$scope', 'cardCategoryService',
             sharedProperties.setBody(body);
             sharedProperties.setColour(colour);
             sharedProperties.setSingleCategory(categoryID);
-            sharedProperties.setCardSEI_Id(seiID);
+            sharedProperties.setCardSEI_Ids(seiIDs);
             $location.path('/card')
         });
     }]);
@@ -50,8 +49,9 @@ itgsApp.controller('cardController', ['$scope', 'sharedProperties', 'seiService'
                 category: sharedProperties.getSingleCategory(),
                 colour: sharedProperties.getColour(),
                 seis: seiService.getSEITitles(),
-                seiID: sharedProperties.getCardSEI_Id()
+                seiID: sharedProperties.getCardSEI_Ids()
             };
+            console.log($scope.properties);
         }, 350);
 
     }]);

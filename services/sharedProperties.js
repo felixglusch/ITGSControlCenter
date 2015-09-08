@@ -7,7 +7,7 @@ itgsApp.service('sharedProperties', function () {
     var cardCategories = [];
     var colour = "";
     var category = "";
-    var cardSEI_Id = 0;
+    var cardSEI_Ids = [];
     return {
         getTitle: function ()         { return title; },
         setTitle: function (val)      { title = val; },
@@ -24,7 +24,7 @@ itgsApp.service('sharedProperties', function () {
         getColour: function ()        { return colour; },
         setColour: function (val)     { colour = "#" + val; },
 
-        getCardSEI_Id: function ()        { return cardSEI_Id; },
-        setCardSEI_Id: function (val)     { cardSEI_Id = val; }
+        getCardSEI_Ids: function ()         { return cardSEI_Ids; },
+        setCardSEI_Ids: function (vals)     { cardSEI_Ids = vals; }
     };
 });

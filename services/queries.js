@@ -14,7 +14,7 @@ itgsApp.service('cardCategoryService', function () {
                     for (var i = 0; i < results.length; i++) {
                         var object = results[i];
                         var category = object.get('category');
-                        categoryList.splice(categoryList.length, 0, category);
+                        categoryList.push(category);
                     }
                 },
                 error: function (error) {
@@ -52,13 +52,13 @@ itgsApp.service('cardDataService', function () {
                         var currentCatID = cardObject.get('category');
                         // TODO: remove DOM modifications from service. They work here, but it's not best practice.
                         if (currentCatID != previousCatID) {
-                            //table.splice(table.length, 0, categoryList[currentCatID]);
+                            //table.push(categoryList[currentCatID]);
                             list.append('<h3 class="cardCategory" id="category'
                                 + currentCatID + '">' + categoryList[currentCatID] + '</h3>')
                         }
                         previousCatID = currentCatID;
                         list.append('<button name="btnListItem" class="list-group-item">' + title + '</button>');
-                        //table.splice(table.length, 0, title);
+                        //table.push(title);
                     }
                     //console.log(dict);
                 },
@@ -83,7 +83,7 @@ itgsApp.service('seiDataService', function () {
                 do {
                     var seiId = dictSEIs[cardIndex];
                     console.log("seiID" + seiId);
-                    seiIDs.splice(seiIDs.length, 0, seiId);
+                    seiIDs.push(seiId);
                     cardIndex += 1;
                 } while (hasMoreSeis(cardIndex));
 
@@ -126,7 +126,7 @@ itgsApp.service('seiDataService', function () {
 });
 
 itgsApp.service('seiService', function() {
-    var titles = [];
+    var titles = ["0th placeholder"];
 
     return {
         getSEITitles: function(){
@@ -143,8 +143,7 @@ itgsApp.service('seiService', function() {
                     for (var i = 0; i < results.length; i++) {
                         var object = results[i];
                         title = " " + object.get('title');
-                        //var htmlElement = '<label class="smallPadding"><input type="checkbox">' + title + '</label>';
-                        titles.splice(titles.length , 0, title);
+                        titles.push(title);
                     }
                 },
                 error: function (error) {

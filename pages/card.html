@@ -42,8 +42,14 @@
                     <div class="form-group">
                         <label >Social & Ethical Issues</label>
                         <div class="checkbox" >
-                            <label ng-repeat="sei in properties.seis" class="smallPadding">
-                                <input type="checkbox" >{{ sei }}</label>
+                            <label ng-if="$index > 0" ng-repeat="sei in properties.seis"
+                                   class="smallPadding">
+                                <input
+                                        type="checkbox"
+                                        ng-checked="properties.seiIDs.indexOf(properties.seis.indexOf(sei)) > -1"
+                                        ng-click="toggleSelection(sei)"
+                                        >{{ sei }}
+                            </label>
                         </div>
                     </div>
 

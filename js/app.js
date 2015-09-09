@@ -49,10 +49,35 @@ itgsApp.controller('cardController', ['$scope', 'sharedProperties', 'seiService'
                 category: sharedProperties.getSingleCategory(),
                 colour: sharedProperties.getColour(),
                 seis: seiService.getSEITitles(),
-                seiID: sharedProperties.getCardSEI_Ids()
+                seiIDs: sharedProperties.getCardSEI_Ids()
             };
             console.log($scope.properties);
         }, 350);
+
+        // toggle selection for a given sei by name
+        $scope.toggleSelection = function toggleSelection(sei) {
+            /* Check if an sei (by id) is inside the seiIDs array.
+            * If it is, then delete it (** DELETE **). If not, add it. (** ADD **) */
+
+            var seiIndexOf = $scope.properties.seis.indexOf(sei);
+            var seiIDIndexOf = $scope.properties.seiIDs.indexOf(seiIndexOf);
+
+            console.log("seiIDIndexOf " + seiIDIndexOf);
+            // is currently selected ....... ** ADD **
+            if (seiIDIndexOf == -1) {
+                console.log("pushed");
+                $scope.properties.seiIDs.push(seiIndexOf);
+
+            }
+            // is newly selected ....... ** DELETE **
+            else {
+                console.log("spliced");
+                $scope.properties.seiIDs.splice(seiIDIndexOf, 1);
+
+            }
+
+            console.log($scope.properties.seiIDs);
+        };
 
     }]);
 

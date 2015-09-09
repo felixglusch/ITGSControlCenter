@@ -18,7 +18,7 @@ itgsApp.service('sharedProperties', function () {
         getCategories: function ()    { return cardCategories; },
         setCategories: function (val) { cardCategories = val; },
 
-        getSingleCategory: function () { return category; },
+        getSingleCategory: function ()    { return category; },
         setSingleCategory: function (val) { category = cardCategories[val]; },
 
         getColour: function ()        { return colour; },

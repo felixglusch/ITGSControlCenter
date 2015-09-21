@@ -1,19 +1,38 @@
-var itgsApp = angular.module('itgsApp', ['ngRoute', 'colorpicker.module']);
 // TODO: remove below variable from global scope
 var categoryList = ["0 placeholder"];
 
-itgsApp.controller('homeController', ['$scope', 'cardCategoryService',
-    'cardDataService', 'seiDataService','sharedProperties',
-    '$location', '$timeout',
-    function ($scope, cardCategoryService, cardDataService, seiDataService,sharedProperties,
-              $location, $timeout) {
-        angular.element(document).ready(function () {
-            cardCategoryService.queryCategories();
-            cardDataService.queryData();
-            seiDataService.queryData();
-        });
 
-        $timeout(function(){
+var itgsApp = angular.module('itgsApp', ['ngRoute']);
+/*
+ $rootScope.$on("$routeChangeStart", function (event, next, current) {
+ if (sessionStorage.restorestate == "true") {
+ $rootScope.$broadcast('restorestate'); //let everything know we need to restore state
+ sessionStorage.restorestate = false;
+ }
+ });
+
+ //let everthing know that we need to save state now.
+ window.onbeforeunload = function (event) {
+ $rootScope.$broadcast('savestate');
+ };
+ */
+
+
+itgsApp.controller('homeController', ['$scope', 'cardCategoryService',
+    'cardDataService', 'seiDataService', 'sharedProperties',
+    '$location', '$timeout',
+    function ($scope, cardCategoryService, cardDataService, seiDataService, sharedProperties,
+              $location, $timeout) {
+
+
+        //$scope.home = homeService;
+
+
+        cardCategoryService.queryCategories();
+        cardDataService.queryData();
+        seiDataService.queryData();
+
+        $timeout(function () {
             $scope.categories = categoryList;
             sharedProperties.setCategories($scope.categories);
         }, 450);
@@ -38,8 +57,14 @@ itgsApp.controller('homeController', ['$scope', 'cardCategoryService',
         });
     }]);
 
-itgsApp.controller('cardController', ['$scope', 'sharedProperties', 'seiService', '$timeout',
+itgsApp.controller('cardController', ['$scope', 'sharedProperties',
+    'seiService', '$timeout',
     function ($scope, sharedProperties, seiService, $timeout) {
+
+
+        //$scope.card  = cardService;
+
+
         seiService.querySEIs();
         $timeout(function () {
             $scope.properties = {
@@ -54,29 +79,38 @@ itgsApp.controller('cardController', ['$scope', 'sharedProperties', 'seiService'
             console.log($scope.properties);
         }, 350);
 
+/*
+        $scope.$watch('properties.title', function (newVal, oldVal, scope) {
+            $scope.properties.title = newVal;
+        });
+
+        $scope.$watch('properties.content', function (newVal, oldVal, scope) {
+            $scope.properties.content = newVal;
+        });
+*/
+
         // toggle selection for a given sei by name
         $scope.toggleSelection = function toggleSelection(sei) {
             /* Check if an sei (by id) is inside the seiIDs array.
-            * If it is, then delete it (** DELETE **). If not, add it. (** ADD **) */
+             * If it is, then delete it (** DELETE **). If not, add it. (** ADD **) */
 
             var seiIndexOf = $scope.properties.seis.indexOf(sei);
             var seiIDIndexOf = $scope.properties.seiIDs.indexOf(seiIndexOf);
 
-            console.log("seiIDIndexOf " + seiIDIndexOf);
+            //console.log("seiIDIndexOf " + seiIDIndexOf);
             // is currently selected ....... ** ADD **
             if (seiIDIndexOf == -1) {
-                console.log("pushed");
+                //console.log("pushed");
                 $scope.properties.seiIDs.push(seiIndexOf);
 
             }
             // is newly selected ....... ** DELETE **
             else {
-                console.log("spliced");
+                //console.log("spliced");
                 $scope.properties.seiIDs.splice(seiIDIndexOf, 1);
 
             }
-
-            console.log($scope.properties.seiIDs);
+            //console.log($scope.properties.seiIDs);
         };
 
     }]);

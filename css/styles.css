@@ -84,6 +84,13 @@ td {
 #titleContent{
     outline:0 !important;
     -webkit-appearance:none;
+    background-color: transparent;
+    border: none;
+    resize: none;
+    box-shadow: none;
+    height: 30px;
+    width: 100%;
+    font-weight: bold;
 }
 
 #cardContent

@@ -1,64 +1,64 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-10 col-md-offset-1">
-            <div class="panel panel-default marginTopSmall" id="cardPanel">
-                <div class="panel-heading">
-                    <h3 class="panel-title" id="titleContent" contenteditable="true">{{ properties.title }}</h3>
-                </div>
-                <div class="panel-body">
-                    <form class="form-group">
+            <form id="form">
+                <div class="panel panel-default marginTopSmall" id="cardPanel">
+                    <div class="panel-heading">
+                        <label for="titleContent"></label>
+                        <textarea class="panel-title" id="titleContent" required="required"
+                                  ng-model="properties.title">{{ properties.title }}</textarea>
+                    </div>
+                    <div class="panel-body">
                         <label for="cardContent"></label>
-                        <textarea class="form-control" id="cardContent" required="required" >{{ properties.content }}</textarea>
-                    </form>
+                        <textarea class="form-control" id="cardContent" required="required"
+                                  ng-model="properties.content">{{ properties.content }}</textarea>
+                    </div>
                 </div>
-            </div>
 
-            <div id="cardSettings">
-                <h3><span class="glyphicon glyphicon-cog"></span> Card Settings</h3>
-                <hr>
-                <form class="form">
+                <div id="cardSettings">
+                    <h3><span class="glyphicon glyphicon-cog"></span> Card Settings</h3>
+                    <hr>
 
-                    <label for="category">Category</label>
-                    <div class="form-group">
-                        <!-- ng-model here binds the category data received from home to the select attribute
-                        Eg. the selected card category appears as default here. -->
-                        <select id="category" ng-model="properties.category">
-                            <option ng-repeat="category in properties.categories"
-                                    ng-if="$index > 0" value="{{ category }}"
-                                    >{{ category }}</option>
-                        </select>
-                    </div>
-
-                    <label for="colorPicker">Card Colour</label>
-                    <div class="form-group input-group">
-                        <input class="form-control" type="text"
-                               ng-model="properties.colour" value="{{properties.colour}}"  />
-                        <span class="input-group-addon">
-                            <input id="colorPicker" type="color"
-                                   ng-model="properties.colour" value="{{properties.colour}}">
-                        </span>
-                    </div>
-
-                    <div class="form-group">
-                        <label >Social & Ethical Issues</label>
-                        <div class="checkbox" >
-                            <label ng-if="$index > 0" ng-repeat="sei in properties.seis"
-                                   class="smallPadding">
-                                <input
-                                        type="checkbox"
-                                        ng-checked="properties.seiIDs.indexOf(properties.seis.indexOf(sei)) > -1"
-                                        ng-click="toggleSelection(sei)"
-                                        >{{ sei }}
-                            </label>
+                        <label for="category">Category</label>
+                        <div class="form-group">
+                            <!-- ng-model here binds the category data received from home to the select attribute
+                            Eg. the selected card category appears as default here. -->
+                            <select id="category" ng-model="properties.category">
+                                <option ng-repeat="category in properties.categories"
+                                        ng-if="$index > 0" value="{{ category }}"
+                                        >{{ category }}</option>
+                            </select>
                         </div>
-                    </div>
 
-                    <div class="form-group">
-                        <input type="button" class="btn btn-primary" value="Save Card Content" />
-                    </div>
-
-                </form>
-            </div>
+    <!--                TODO: Remove input, just show colour of the category selected
+                        <label for="colorPicker">Card Colour</label>
+                        <div class="form-group input-group">
+                            <input class="form-control" type="text"
+                                   ng-model="properties.colour" value="{{properties.colour}}"  />
+                            <span class="input-group-addon">
+                                <input id="colorPicker" type="color"
+                                       ng-model="properties.colour" value="{{properties.colour}}">
+                            </span>
+                        </div>
+    -->
+                        <div class="form-group">
+                            <label >Social & Ethical Issues</label>
+                            <div class="checkbox" >
+                                <label ng-if="$index > 0" ng-repeat="sei in properties.seis"
+                                       class="smallPadding">
+                                    <input
+                                            type="checkbox"
+                                            ng-checked="properties.seiIDs.indexOf(properties.seis.indexOf(sei)) > -1"
+                                            ng-click="toggleSelection(sei)"
+                                            >{{ sei }}
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="button" class="btn btn-primary" value="Save Card Content" />
+                        </div>
+                </div>
+            </form>
         </div>
     </div>
 </div>
